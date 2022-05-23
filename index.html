@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todoist | Preesh Inc.</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/navbar.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div class="navigation">
+      <header>
+        <svg height="32" width="127" xmlns="http://www.w3.org/2000/svg" class="_2FJDO logo"><mask id="td-logo-wordmark_svg__a" fill="#fff"><path d="M0 0h32.042v32H0z" fill-rule="evenodd"></path></mask><g fill="none" fill-rule="evenodd"><path d="M54.778 19.281c0 .518.087 1.02.26 1.499a3.757 3.757 0 001.977 2.167c.473.222 1.01.333 1.61.333.599 0 1.136-.111 1.609-.333a3.808 3.808 0 001.214-.888c.335-.37.59-.796.763-1.28.17-.478.257-.98.257-1.498a4.45 4.45 0 00-.257-1.5 3.807 3.807 0 00-.763-1.278 3.814 3.814 0 00-1.214-.888 3.754 3.754 0 00-1.61-.335c-.598 0-1.136.113-1.609.335a3.767 3.767 0 00-1.978 2.165 4.44 4.44 0 00-.259 1.501m-3.204.16c0-1.062.189-2.026.567-2.892a6.73 6.73 0 011.533-2.221 6.757 6.757 0 012.29-1.426 7.912 7.912 0 012.82-.502c.993 0 1.933.168 2.817.502a6.79 6.79 0 012.293 1.426 6.759 6.759 0 011.533 2.221c.377.866.566 1.83.566 2.892s-.189 2.026-.566 2.892a6.76 6.76 0 01-1.533 2.221 6.75 6.75 0 01-2.293 1.424 7.853 7.853 0 01-2.817.502 7.863 7.863 0 01-2.82-.502 6.717 6.717 0 01-2.29-1.424 6.73 6.73 0 01-1.533-2.221c-.378-.866-.567-1.83-.567-2.892m19.225-.16c0 .518.087 1.02.26 1.499a3.76 3.76 0 001.977 2.167c.473.222 1.01.333 1.61.333.599 0 1.136-.111 1.609-.333a3.796 3.796 0 001.213-.888 3.77 3.77 0 00.764-1.28c.17-.478.257-.98.257-1.498a4.45 4.45 0 00-.257-1.5 3.798 3.798 0 00-.764-1.278 3.802 3.802 0 00-1.213-.888 3.753 3.753 0 00-1.61-.335c-.599 0-1.136.113-1.609.335a3.771 3.771 0 00-1.977 2.165c-.173.482-.26.984-.26 1.501zm8.041 4.57h-.056c-.483.807-1.13 1.394-1.948 1.76a6.403 6.403 0 01-2.644.549c-1.04 0-1.962-.177-2.77-.535a6.198 6.198 0 01-2.074-1.472 6.26 6.26 0 01-1.309-2.2 8.122 8.122 0 01-.444-2.721c0-.971.156-1.88.474-2.723a6.76 6.76 0 011.32-2.2 6.112 6.112 0 012.046-1.47 6.324 6.324 0 012.616-.537c.632 0 1.19.065 1.672.192.483.13.908.293 1.28.497.371.202.687.416.947.645.258.23.474.454.639.673h.084V7.038c0-.33.264-.718.728-.718h1.887c.436 0 .726.362.726.718v18.074c0 .46-.394.719-.726.719H79.57a.733.733 0 01-.73-.718zm8.621-4.57c0 .518.087 1.02.26 1.499a3.752 3.752 0 001.978 2.167c.472.222 1.01.333 1.609.333s1.136-.111 1.609-.333a3.801 3.801 0 001.214-.888c.335-.37.59-.796.763-1.28.171-.478.257-.98.257-1.498a4.45 4.45 0 00-.257-1.5 3.802 3.802 0 00-.763-1.278 3.807 3.807 0 00-1.214-.888 3.754 3.754 0 00-1.61-.335c-.598 0-1.136.113-1.608.335a3.763 3.763 0 00-1.978 2.165c-.173.482-.26.984-.26 1.501m-3.204.16c0-1.062.189-2.026.567-2.892a6.73 6.73 0 011.533-2.221 6.757 6.757 0 012.29-1.426 7.912 7.912 0 012.82-.502c.993 0 1.933.168 2.816.502a6.79 6.79 0 012.293 1.426 6.759 6.759 0 011.533 2.221c.378.866.567 1.83.567 2.892s-.19 2.026-.567 2.892a6.76 6.76 0 01-1.533 2.221 6.75 6.75 0 01-2.293 1.424 7.853 7.853 0 01-2.816.502 7.862 7.862 0 01-2.82-.502 6.717 6.717 0 01-2.29-1.424 6.73 6.73 0 01-1.533-2.221c-.378-.866-.567-1.83-.567-2.892M100.278 7.92c0-.516.194-.963.581-1.347.39-.382.88-.573 1.474-.573.595 0 1.096.182 1.501.547.405.364.61.822.61 1.373s-.205 1.009-.61 1.373c-.405.365-.906.547-1.5.547-.595 0-1.085-.191-1.475-.575-.387-.382-.58-.829-.58-1.345m13.756 8.531c-.329 0-.571-.253-.613-.363-.274-.73-1.148-1.005-1.854-1.005-1.113 0-1.986.524-1.986 1.425 0 .872.845 1.05 1.367 1.21.573.177 1.668.42 2.271.564a7.297 7.297 0 011.719.643c1.752.924 2.001 2.378 2.001 3.254 0 3.23-3.15 4.301-5.336 4.301-1.686 0-4.853-.26-5.548-3.525-.068-.317.21-.806.718-.806h1.82c.36 0 .601.266.671.474.235.657.979 1.152 2.233 1.152 1.346 0 2.142-.542 2.142-1.263 0-.466-.26-.882-.6-1.115-1.021-.704-3.545-.783-4.915-1.524-.525-.283-1.842-.932-1.842-3.142 0-3.046 2.726-4.331 5.12-4.331 3.532 0 4.828 2.267 4.974 3.107.081.464-.175.944-.688.944zm3.226-1.826V13.25c0-.329.262-.723.728-.723h1.799V9.149c0-.361.249-.581.437-.662l1.921-.827c.562-.227 1.016.229 1.016.668v4.199h2.977c.46 0 .734.395.734.723v1.377c0 .4-.362.725-.733.725h-2.978v5.821c0 .665-.019 1.185.239 1.57.236.352.583.482 1.278.482.2 0 .377-.033.527-.083a.723.723 0 01.883.319c.22.418.47.878.647 1.208a.735.735 0 01-.316.995c-.571.274-1.362.496-2.447.496-.899 0-1.408-.097-1.977-.291a3.405 3.405 0 01-1.441-1.003c-.33-.396-.493-.928-.614-1.519-.124-.59-.153-1.308-.153-2.085v-5.91h-1.794c-.47 0-.733-.402-.733-.727m-75.94 0V13.25c0-.329.255-.723.71-.723h2.001V9.149c0-.361.242-.581.426-.662l1.87-.827c.548-.227.99.229.99.668v4.199h2.9c.448 0 .715.395.715.723v1.377a.743.743 0 01-.714.725h-2.9v5.821c0 .665-.019 1.185.232 1.57.23.352.568.482 1.245.482.194 0 .367-.033.514-.083a.697.697 0 01.86.319c.213.418.458.878.63 1.208.188.362.036.826-.309.995-.556.274-1.326.496-2.382.496-.876 0-1.372-.097-1.926-.291a3.32 3.32 0 01-1.404-1.003c-.321-.396-.48-.928-.598-1.519-.12-.59-.149-1.308-.149-2.085v-5.91h-1.997c-.459 0-.715-.402-.715-.727m60.296 11.215h1.81c.384 0 .697-.32.697-.713V13.433a.707.707 0 00-.696-.713h-1.811a.707.707 0 00-.697.713v11.694c0 .392.313.713.697.713" fill="#e44332"></path><path d="M4.005 0A4.014 4.014 0 000 4v24c0 2.2 1.802 4 4.005 4h24.032c2.203 0 4.005-1.8 4.005-4V4c0-2.2-1.802-4-4.005-4z" fill="#e44332" mask="url(#td-logo-wordmark_svg__a)"></path><g fill="#fff"><path d="M6.792 15.157l12.865-7.479c.275-.16.289-.653-.02-.83-.308-.178-.893-.514-1.111-.643a1.004 1.004 0 00-.991.012c-.154.09-10.433 6.06-10.776 6.256-.412.236-.92.24-1.33 0L0 9.287v2.708c1.321.778 4.607 2.71 5.403 3.165.475.27.93.264 1.389-.003"></path><path d="M6.792 20.277l12.865-7.479c.275-.16.289-.653-.02-.83-.308-.178-.893-.514-1.111-.643a1.004 1.004 0 00-.991.012c-.154.09-10.433 6.06-10.776 6.256-.412.236-.92.24-1.33 0L0 14.407v2.708c1.321.778 4.607 2.71 5.403 3.165.475.27.93.264 1.389-.003"></path><path d="M6.792 25.717l12.865-7.479c.275-.16.289-.653-.02-.83-.308-.178-.893-.514-1.111-.643a1.004 1.004 0 00-.991.012c-.154.09-10.433 6.06-10.776 6.256-.412.236-.92.24-1.33 0L0 19.847v2.708c1.321.778 4.607 2.71 5.403 3.165.475.27.93.264 1.389-.003"></path></g></g></svg>
+      </header>
+      <nav>
+        <div class="links-container1">
+          <ul class="navigation-menu">
+          <li class="light-text">Features</li>
+          <li class="light-text">Templates</li>
+          <li class="light-text">For Teams</li>
+          <li class="dropdown">
+            <span>Resources <i class="fa-solid fa-chevron-down"></i></span>
+            <div class="dropdown-content light-text">
+              <div class="dropdown-items">
+                <a href="#">Integrations</a>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere voluptates rerum ab perspiciatis deserunt magni?</p>
+                
+              </div>
+              <div class="dropdown-items">
+                <a href="#">Getting Started Guide</a>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere voluptates rnt magni?</p>
+                
+              </div>
+              <div class="dropdown-items">
+                <a href="#">Help Center</a>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fa perspiciatis deserunt magni?</p>
+                
+              </div>
+              <div class="dropdown-items">
+                <a href="#">Productivity Methods</a>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere voluptates rerum ab deserunt magni?</p>
+                
+              <div class="dropdown-items">
+                <a href="#">Blog</a>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere voluptates rerum ab perspiciatis deserunt magni?</p>
+                
+              </div>
+            </div>
+          </li>
+          <li>Pricing</li>
+        </ul>
+        </div>
+        <div class="users-nav">
+          <ul>
+            <li class="light-text">Log in</li>
+            <li class="light-text">Sign up</li>
+          </ul>
+          <button class="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+        </div>
+      </nav>
+      
+    </div>
+    <div class="links-container">
+          <ul class="links">
+          <li class="light-text">Features</li>
+          <li class="light-text">Templates</li>
+          <li class="light-text">For Teams</li>
+          <li class="dropdown ">
+            <span>Resources <i class="fa-solid fa-chevron-down"></i></span>
+            <div class="new-drop-down-content">
+              <div class="new-items">
+                <a href="#">Integrations</a>
+                
+              </div>
+              <div class="new-items">
+                <a href="#">Getting Started Guide</a>
+                
+              </div>
+              <div class="new-items">
+                <a href="#">Help Center</a>
+                
+              </div>
+              <div class="new-items">
+                <a href="#">Productivity Methods</a>
+              </div>
+              <div class="new-items">
+                <a href="#">Blog</a>
+                
+              </div>
+            </div>
+          </li>
+          <li>Pricing</li>
+        </ul>
+        </div>
+    <main>
+      <section class="intro1">
+        <div class="main-intro">
+          <h1 class="main-text">Organize your <br> work and life, finally.</h1>
+                  <p class="desc-text">
+          Become focused, organized, and calm with Todoist. <br> The world’s #1 task manager and to-do list app.
+        </p>
+        <button class="intro1-btn">Start for free</button>
+        </div>
+        <!-- <div class="intro-hero-images">
+          <div class="main-back">
+          <img src="https://todoist.com/_next/static/images/bg-left_ec42cae325f6e50083f84e73af60ebc0.webp" alt="" class="left-intro1">
+          <img src="https://todoist.com/_next/static/images/bg-right_e970a806f622dc0514e793511e4fdf0c.webp" alt="" class="right-intro1">
+          </div>
+
+          <div class="overlay-img">
+                      <img src="https://todoist.com/static/home/hero/illustration_w_1953.webp" alt="" class="middle">
+          </div>
+        </div> -->
+      </section>
+      <section class="section2">
+        <div class="left-sect">
+          <p class="section2-light-text">Get more done</p>
+          <h3 class="section2-head">Add your tasks. <br>
+Organize your life. <br>
+Achieve more every day.</h3>
+          <p class="section2-text">Add tasks like “Read work emails every day at 10am” to fill your to-do list in seconds using Todoist’s powerful natural language recognition and recurring dates.</p>
+          </p>
+        </div>
+        <div class="right-sect">
+          <div class="section2-img">
+            <img src="https://todoist.com/static/home/features/get-more-done-1008.webp" alt="">
+          </div>
+        </div>
+      </section>
+      <section class="section3">
+        <div class="right-sect">
+          <div class="section3-img">
+            <img src="https://todoist.com/static/home/features/clear-your-mind-1008.webp" alt="">
+          </div>
+        </div>
+        <div class="left-sect" style="margin-left: 0rem;">
+         <p class="section2-light-text">CLEAR YOUR MIND</p>
+          <h3 class="section2-head">Reach that mental clarity <br> you’ve been longing for..</h3>
+          <p class="section2-text">Your to-do lists are automatically sorted into Today, Upcoming and custom Filter views to help you focus on your most important things.</p>
+          </p>
+        </div>
+      </section>
+      <section class="section4">
+        <div class="bar"></div>
+        <div class="upper-heading">
+          <h1 class="section2-head">
+            Delightfully simple and deceptively powerful task management
+          </h1>
+          <p class="section2-text">
+            30 million+ people organize billions of tasks in Todoist for their work, education, and personal life.
+          </p>
+        </div>
+        <div class="lower-heading">
+          <div class="grid5">
+            <div class="item1">
+              <img src="https://todoist.com/_next/static/images/icon-1_ad640abe99c49ae1a0c9eb05bb104956.webp" alt="" class="grid-item1">
+              <h3 class="grid-item1-text">
+                With you everywhere
+              </h3>
+              <p class="grid-item-text-2">Use Todoist’s apps, extensions and widgets on any device or platform.</p>
+              <a href="#" class="download-link">​Download apps ></a>
+            </div>
+                        <div class="item1">
+              <img src="https://todoist.com/_next/static/images/icon-2_4210d085bc16b95d19ee9605ca20a8d5.webp" alt="" class="grid-item1">
+              <h3 class="grid-item1-text">
+                There’s a template for that
+              </h3>
+              <p class="grid-item-text-2">Hundreds of templates are available to get you started with whatever’s on your plate</p>
+              <a href="#" class="download-link">​
+Download apps ></a>
+            </div>
+                        <div class="item1">
+              <img src="https://todoist.com/_next/static/images/icon-4_f546eb9c7155fd7ea242af71babeeeca.webp" alt="" class="grid-item1">
+              <h3 class="grid-item1-text">
+                Connect with your other tools
+              </h3>
+              <p class="grid-item-text-2">Link Todoist with your calendar, voice assistant, and 30+ other tools.</p>
+              <a href="#" class="download-link">​
+Download apps ></a>
+            </div>
+                        <div class="item1">
+              <img src="https://todoist.com/_next/static/images/icon-5_e69e3f0df7d5163b16ea9cd82df9bec9.webp" alt="" class="grid-item1">
+              <h3 class="grid-item1-text">
+                With you everywhere
+              </h3>
+              <p class="grid-item-text-2">Use Todoist’s apps, extensions and widgets on any device or platform.</p>
+              <a href="#" class="download-link">​
+Download apps ></a>
+            </div>
+                        <div class="item1">
+              <img src="https://todoist.com/_next/static/images/icon-1_ad640abe99c49ae1a0c9eb05bb104956.webp" alt="" class="grid-item1">
+              <h3 class="grid-item1-text">
+                Productivity Methods
+              </h3>
+              <p class="grid-item-text-2">Personal productivity recommendations based on your unique traits and strengths..</p>
+              <a href="#" class="download-link">​
+Download apps ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section5">
+        <div class="upper-layer">
+          <div class="bar"></div>
+          <div class="grid6">
+            <div class="grid-item-1">
+            <div class="grid6-heading">
+              <h3>A task manager you can trust for life</h3>
+            </div>
+            <p class="grid6-text">
+              We’ve been building Todoist for 15 years and 111 days.
+              <a href="#"> We're in it for the long haul.</a>
+            </p>
+            </div>
+            <div class="grid-item2">
+              <img src="https://todoist.com/_next/static/images/icon-1_f82782a12a887c709e39ecf02741af8a.webp" alt="" class="small-image">
+              <h4 class="grid-item1-text">30 million+</h4>
+              <p>app downloads</p>
+            </div>
+                        <div class="grid-item2">
+              <img src="	https://todoist.com/_next/static/images/icon-2_3cdfd11975b2d14cf4ee942720cd1cc7.webp" alt="" class="small-image">
+              <h4 class="grid-item1-text">2 billion+</h4>
+              <p>tasks completed</p>
+            </div>
+                        <div class="grid-item2">
+              <img src="https://todoist.com/_next/static/images/icon-1_f82782a12a887c709e39ecf02741af8a.webp" alt="" class="small-image">
+              <h4 class="grid-item1-text">160 countries+</h4>
+              <p>user locationss</p>
+            </div>
+                        <div class="grid-item2">
+              <img src="https://todoist.com/_next/static/images/icon-1_f82782a12a887c709e39ecf02741af8a.webp" alt="" class="small-image">
+              <h4 class="grid-item1-text">1 million+</h4>
+              <p>pro users</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section7">
+            <div class="lower-layer">
+          <div class="side-img">
+            <img src="	https://todoist.com/_next/static/images/peace@2x_158f4453627629ae1dd3ec115a559630.webp" alt="">
+          </div>
+          <div class="side-head">
+            <h2>Achieve peace of mind with Todoist</h2>
+            <button class="intro1-btn">Start for free</button>
+          </div>
+        </div>
+      </section>
+      <section class="last">
+        <div class="grid2">
+          <div class="left-side-content">
+            <p class="grid6-text">
+              Join millions of people who organize work and life with Todoist.
+            </p>
+            <div class="icons">
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+          </div>
+        </div>
+          <div class="right-side-content">
+            <div class="grid-stack">
+              <div class="grid-heads">Features</div>
+            <p class="grid-elements">How It Works</p>
+            <p class="grid-elements">For Teams</p>
+            <p class="grid-elements">Pricing!</p>
+            <p class="grid-elements">Templates</p>
+            </div>
+            
+            <div class="grid-stack">
+                          <div class="grid-heads">Resources</div>
+            <p class="grid-elements">Download Apps</p>
+            <p class="grid-elements">Help Center</p>
+            <p class="grid-elements">Productivity Methods</p>
+            <p class="grid-elements">Refer a friend</p>
+            <p class="grid-elements">Integrations</p>
+            <p class="grid-elements">Channel Partners</p>
+            <p class="grid-elements">Developre API</p>
+            <p class="grid-elements">Status</p>
+            </div>
+            
+            
+            <div class="grid-stack">
+              <div class="grid-heads">Company</div>
+              <p class="grid-elements">We are hiring!</p>
+              <p class="grid-elements">Blog</p>
+              <p class="grid-elements">Press</p>
+              <p class="grid-elements">Twist</p>
+
+            </div>
+
+          </div>
+      </section>
+    </main>
+    <footer>
+      <div class="left-ele">
+        <a href="#">Security  </a> &#124
+        <a href="#"> Privacy   </a>&#124
+        <a href="#"> Terms </a>
+        <p>&copf; Doist Inc</p>
+      </div>
+
+    </footer>
+
+
+    <!-- Script -->
+    <script src="index.js"></script>
+  </body>
+</html>
